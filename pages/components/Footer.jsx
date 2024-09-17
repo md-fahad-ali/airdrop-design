@@ -85,22 +85,24 @@ export default function Footer(props) {
           </div>
         </Link>
 
-        <div
-          className={`text-center text-[#85827d] w-[17%] bg-[#092d3f] m-1 p-2 rounded-2xl cursor-pointer ${
-            data == "airdrop" ? "bg-[#092d3f]" : "bg-transparent"
-          }`}
-          onClick={() => clickButton("airdrop")}
-          data-type="airdrop"
-        >
-          <Image
-            src="/assets/airdrop.png"
-            alt="Exchange"
-            className="w-8 h-8 mx-auto"
-            width={50}
-            height={50}
-          />
-          <p className="mt-1">Airdrop</p>
-        </div>
+        <Link href="/airdrop" className="w-[17%]">
+          <div
+            className={`text-center text-[#85827d] m-1 p-2 rounded-2xl cursor-pointer ${
+              data == "airdrop" ? "bg-[#092d3f]" : "bg-transparent"
+            }`}
+            onClick={() => clickButton("airdrop")}
+            data-type="airdrop"
+          >
+            <Image
+              src="/assets/airdrop.png"
+              alt="airdrop"
+              className="w-8 h-8 mx-auto"
+              width={50}
+              height={50}
+            />
+            <p className="mt-1">Airdrop</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
