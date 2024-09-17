@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -17,10 +18,12 @@ export default function Footer(props) {
             onClick={() => clickButton("exchange")}
             data-type="exchange"
           >
-            <img
+            <Image
               src="/assets/binance-logo.png"
               alt="Exchange"
               className="w-8 h-8 mx-auto"
+              width={50}
+              height={50}
             />
             <p className="mt-1 -ml-[8px]">Exchange</p>
           </div>
@@ -33,10 +36,12 @@ export default function Footer(props) {
             onClick={() => clickButton("mine")}
             data-type="mine"
           >
-            <img
+            <Image
               src="/assets/mine.png"
               alt="Exchange"
               className="w-8 h-8 mx-auto"
+              width={50}
+              height={50}
             />
             <p className="mt-1">Mine</p>
           </div>
@@ -50,10 +55,12 @@ export default function Footer(props) {
             onClick={() => clickButton("friends")}
             data-type="friends"
           >
-            <img
+            <Image
               src="/assets/friends.png"
               alt="Friends"
               className="w-8 h-8 mx-auto"
+              width={50}
+              height={50}
             />
             <p className="mt-1">Friends</p>
           </div>
@@ -67,10 +74,12 @@ export default function Footer(props) {
             onClick={() => clickButton("earn")}
             data-type="earn"
           >
-            <img
+            <Image
               src="/assets/earn.png"
               alt="earn"
               className="w-8 h-8 mx-auto"
+              width={50}
+              height={50}
             />
             <p className="mt-1">Earn</p>
           </div>
@@ -83,10 +92,12 @@ export default function Footer(props) {
           onClick={() => clickButton("airdrop")}
           data-type="airdrop"
         >
-          <img
+          <Image
             src="/assets/airdrop.png"
             alt="Exchange"
             className="w-8 h-8 mx-auto"
+            width={50}
+            height={50}
           />
           <p className="mt-1">Airdrop</p>
         </div>

@@ -37,7 +37,7 @@ const Click = (props) => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-transparent">
-      <div className="text-white font-bold text-2xl mb-4 flex justify-center items-center gap-3">
+      <div className="text-white font-bold text-2xl mb-3 flex justify-center items-center gap-3">
         <Image
           src="/assets/coin.png"
           alt="Points:"
@@ -58,27 +58,28 @@ const Click = (props) => {
           damping: 10,
           duration: 0.5,
         }}
-        className="w-80 h-80 rounded-full flex items-center justify-center"
+        className="w-[80%] h-[20rem] max-w-[300px] max-h-[300px] rounded-full flex items-center justify-center"
         onClick={handleTap}
         style={{
           cursor: "pointer",
           transition: "transform 0.2s ease-out",
           background:
             "linear-gradient(rgb(2, 28, 36) 23.1861%, rgb(4, 85, 115) 100%)",
-        }} // Smooth transition for tilt effect
+        }}
       >
         <div
           className="circle-inner w-[90%] h-[90%] rounded-full flex items-center justify-center"
           style={{
             background:
-              "linear-gradient(180deg, rgb(11.000000294297934, 80.00000283122063, 94.0000019967556) 1.9999980926513672%, rgb(14.000000115484, 62.00000010430813, 97.00000181794167) 100%)",
+              "linear-gradient(180deg, rgb(11, 80, 94) 2%, rgb(14, 62, 97) 100%)",
           }}
         >
           <Image
             src="/assets/bird.svg"
-            alt="Dr"
-            width="170"
-            height="170"
+            alt="Bird"
+            width="150"
+            height="150"
+            className="w-[70%] h-[70%] sm:w-[30%] sm:h-[30%] lg:w-[70%] lg:h-[70%]"
             style={{ userSelect: "none" }}
           />
         </div>

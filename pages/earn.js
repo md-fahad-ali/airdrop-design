@@ -84,11 +84,6 @@ export default function MainPage() {
     setOpen(true);
   }
 
-  function addCoin() {
-    console.log("ok");
-    useCoinAnimation();
-  }
-
   return (
     <CoinAnimationProvider>
       <MainContent
@@ -98,7 +93,6 @@ export default function MainPage() {
         setOpen={setOpen}
         clickButton={clickButton}
         mineDrop={mineDrop}
-        addCoin={addCoin}
       />
     </CoinAnimationProvider>
   );
@@ -106,7 +100,12 @@ export default function MainPage() {
 
 function MainContent(props) {
   const { data, jsonData, open, setOpen, clickButton, mineDrop } = props;
-  const addCoin = useCoinAnimation();
+
+  const coinAnimation = useCoinAnimation();
+
+  function addCoin() {
+    coinAnimation();
+  }
 
   const staggerVariants = {
     visible: {

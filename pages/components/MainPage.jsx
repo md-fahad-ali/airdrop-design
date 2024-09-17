@@ -5,6 +5,7 @@ import Click from "./Click";
 import Link from "next/link";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function MainPage() {
   const [data, setData] = useState("exchange");
@@ -18,7 +19,7 @@ export default function MainPage() {
   return (
     <div className="flex bg-black justify-center items-center">
       <div
-        className="w-full bg-black text-white h-screen font-bold flex flex-col max-w-xl"
+        className="w-full bg-black text-white h-dvh font-bold flex flex-col max-w-xl"
         style={{
           background:
             " linear-gradient(180deg, rgb(3.050260436721146, 21.692044213414192, 56.31249949336052) 0%, rgb(5.578124905005097, 71.12109526991844, 89.24999848008156) 100%)",
@@ -48,7 +49,7 @@ export default function MainPage() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between h-[75%]">
+          <div className="flex flex-col justify-between h-[70%]">
             <motion.div
               initial={{ x: "-10px" }}
               animate={{ x: "0px" }}
@@ -56,7 +57,7 @@ export default function MainPage() {
             >
               <div className="px-1 py-2 w-full  ">
                 <div
-                  className="rounded-[14px] z-[99] p-3 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
+                  className="rounded-[14px] z-[99] p-1 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
                   style={{ boxShadow: "0px -2px 2px #ffe200" }}
                 >
                   <Image src="/assets/dr.svg" alt="Dr" width="50" height="50" />
@@ -69,7 +70,7 @@ export default function MainPage() {
 
               <div className="px-1 py-2 w-full ">
                 <div
-                  className="rounded-[14px] z-[99] p-3 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
+                  className="rounded-[14px] z-[99] p-1 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
                   style={{ boxShadow: "0px -2px 2px #ffe200" }}
                 >
                   <Image src="/assets/dr.svg" alt="Dr" width="50" height="50" />
@@ -82,7 +83,7 @@ export default function MainPage() {
 
               <div className="px-1 py-2 w-full">
                 <div
-                  className="rounded-[14px] z-[99] p-3 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
+                  className="rounded-[14px] z-[99] p-1 top-1 h-auto flex flex-col justify-center items-center relative w-[auto] bg-[#07506a]"
                   style={{ boxShadow: "0px -2px 2px #ffe200" }}
                 >
                   <Image src="/assets/dr.svg" alt="Dr" width="50" height="50" />
@@ -123,6 +124,8 @@ export default function MainPage() {
             </div>
           </div>
         </div>
+
+        <Toaster position="top-right" reverseOrder={false} />
         {/* Footer */}
         <Footer clickButton={clickButton} data={data} setData={setData} />
       </div>

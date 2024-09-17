@@ -77,11 +77,6 @@ export default function MainPage() {
     setOpen(true);
   }
 
-  function addCoin() {
-    console.log("ok");
-    useCoinAnimation();
-  }
-
   return (
     <CoinAnimationProvider>
       <MainContent
@@ -99,7 +94,11 @@ export default function MainPage() {
 function MainContent(props) {
   const { data, mineData, open, setOpen, clickButton, mineDrop } = props;
 
-  const addCoin = useCoinAnimation();
+  const coinAnimation = useCoinAnimation();
+
+  function addCoin() {
+    coinAnimation();
+  }
 
   const staggerVariants = {
     visible: {
@@ -152,7 +151,7 @@ function MainContent(props) {
           </div>
 
           <div className="h-[79%] overflow-y-scroll pb-[30px]">
-            <div className="text-white font-bold text-2xl mb-4 flex justify-center items-center gap-3 ">
+            <div className="text-white font-bold text-2xl mb-4 mt-3 flex justify-center items-center gap-3 ">
               <Image
                 src="/assets/coin.png"
                 alt="Points:"
